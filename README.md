@@ -1,5 +1,11 @@
-# THE WITNESS
+# Singularity Bloom
 
-THE WITNESS is a deterministic, pixel-generated macro eye. A warm copper and amber iris carries dark radial grooves, an irregular collarette, crypts, and a near-black limbus with a cool edge. A tilted spiral galaxy glows inside the black pupil. A heavy upper lid, wet lash line, tapered lashes, warm sclera, faint corner veins, and curved corneal reflections give the eye its anatomy and depth.
+A deterministic 1024 × 1024 close-up eye with a warm spiral galaxy in the pupil. The image is computed from arithmetic in TypeScript, using only the Node.js standard library; it needs no external assets or packages.
 
-The renderer uses Node 22 and only Node's standard library. Set `MAKEFUN_OUTPUT_DIR` and run `node main.ts`; it writes `entry.png`. The seeded scene produces identical PNG bytes on repeat runs and keeps the output below 1 MiB.
+Run with Node 22:
+
+```sh
+node main.ts
+```
+
+The renderer writes `entry.png` to `MAKEFUN_OUTPUT_DIR`, or `/output` when that variable is unset. Set `BAND_TEST=1` to report decoded image luminance, SHA-256 values for each 64-row band, and the seam-check verdict.
